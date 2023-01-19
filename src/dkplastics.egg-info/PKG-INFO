@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: dkplastics
+Version: 1.0.0
+Summary: DKPlastics Website
+Home-page: UNKNOWN
+Author: craig duhn
+Author-email: cduhn@hotmail.com
+License: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Keywords: dkplastics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+License-File: LICENSE
+
+# dk_plastics
+
+

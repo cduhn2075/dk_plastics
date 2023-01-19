@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div class="row mainContainer">
+        <div class="row">
+        <div class=" col-lg-6"><h4>Plastic Sheets</h4>
+            <p>Our sheets are produced in thickness from .060" to .750", using the highest quality resins.</p>
+            <br>
+            <h3>
+                Polyolefin
+            </h3>
+            <p>
+               Olefins all share common characteristics. Their outstanding chemical resistance,
+                wide temperature range capability, and economy, position these
+                materials for use in applications ranging from orthotic devices
+                to chute liners, bearing pads, bushings, etc.
+            </p>
+
+            <h4>
+                Highlights:
+            </h4>
+
+                <ul>Cost Effectiveness</ul>
+                <ul>Superior corosion resistance</ul>
+                <ul>High stress crack resistance</ul>
+                <ul>Moisture resistance</ul>
+            <div class="row">
+                <div class="col-lg-6"><img class="img-fluid rounded mx-auto d-block"
+                                           style="height: auto; max-width: 100%"
+                                           src="{{ url_for('static', filename='inventoryResize.png')}}"
+                                           alt="">
+                    <br>
+                    <h3>
+                    Food Grade Material
+
+                </h3>
+                    <p>FDA, Food Grade Material is available upon request.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h3>HDPE</h3>
+                    <p>
+                        Wear and abrasion resistant
+                        Stress crack resistant
+                        High tensile strength
+                        Impervious to most chemicals
+                        Excellent energy absorption
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+            <div class="row text-center col-lg-6">
+                <img class="img-fluid rounded mx-auto d-block" style="height: 75%; width: auto; " src="{{ url_for('static', filename='NewDKPlasticsPics/whiteFinishLine2.png')}}" alt="">
+
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+
+            <div class="text-center col-lg-6">
+                <h3>Available Colors</h3>
+                <img class="img-fluid rounded mx-auto d-block" style="height: auto; max-width: 100%" src="{{ url_for('static', filename='colors2.jpg')}}" alt="">
+
+
+            </div>
+
+            <div class="text-center col-lg-6">
+                <img class="img-fluid rounded mx-auto d-block" style="height: auto; max-width: 100%" src="{{ url_for('static', filename='forklift.jpg')}}" alt="">
+                <p>All plastics available in custom colors, sizes, and additives</p>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+<!--End of container-->
+<script>
+  function showDiv() {
+    let T = document.getElementById("TestsDiv"),
+      displayValue = "";
+    if (T.style.display == "") displayValue = "none";
+    T.style.display = displayValue;
+  }
+
+  function loading() {
+    $("#loading").show();
+    $("#content").hide();
+  }
+
+  $(document).ready(function () {
+    console.log("Im ready ");
+
+    showDiv();
+
+    setTimeout(function () {
+      $("#messageDiv").fadeOut("fast");
+    }, 5000);
+    $(window).load(function () {
+      $("#loading").hide();
+    });
+  });
+</script>
+
+{% endblock %}

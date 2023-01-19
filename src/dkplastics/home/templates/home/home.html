@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="video-container" style="margin-bottom: 15px;">
+     <video autoplay muted loop playsinline>
+    <source src="{{ url_for('static', filename='dkpFirst.mp4') }}" type="video/mp4" />
+  </video>
+    </div>
+
+
+    <div class="row mainContainer">
+        <div class="row"><h4>DK Plastics</h4>
+            <p>DK Plastics was established in 1995 to help meet the growing needs for heavy gauge sheet plastic. We are a successful,
+                family-owned corporation, with our manufacturing facilities headquartered in Archer, Iowa.
+                Our Parent company, Dave De Kok, Inc. was established in 1963. In 1998, we extruded our first HDPE sheets in a new 6000 square foot building.
+                Our business has grown steadily, and in 2007 we added a third extruder, requiring a new building.
+                We began extruding in our new 40,000 square foot building in September of 2007. Our original building houses our thermoforming equipment.
+                <a href="{{ url_for('home.representatives') }}">More...</a></p>
+
+        </div>
+        <hr>
+        <div class="row"><h3>Our Products</h3>    </div>
+        <hr>
+
+
+
+        <div class="card col " style="">
+            <img class="card-img-top img-fluid" src="{{ url_for('static', filename='plasticsheets.jpg')}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-white bg-dark">Sheets</h5>
+                <p class="card-text ">DK Plastics sheets are manufactured in a wide range
+                    of custom sizes and colors – from as small as a sheet of paper,
+                    to rolls 500' long and 5' wide.
+                    From a wafer-thin sheet - .060" to a sturdy ¾" thick.</p>
+                <a href="{{ url_for('home.sheets') }}" class="btn btn-primary">Go Sheets</a>
+            </div>
+        </div>
+
+        <div class="card col " style="">
+            <img class="card-img-top" src="{{ url_for('static', filename='thermoformed-parts.jpeg') }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-white bg-dark">Thermoforming</h5>
+                <p class="card-text">Our vacuum forming and thermoforming equipment adapt quickly and easily to a variety of molds,
+                    sheet sizes and types of plastic. Once the prototype is right, our machine makes the transition to full production
+                    in a few simple steps. It forms all thermoplastics-- ABS Cycolac®, Acrylite®, UVEX®, polycarbonate, Lexan®, Tufftak®, polyethylene, HDPE
+                    --in thicknesses up to and .250". Set-up is fast, simple and inexpensive.</p>
+                <a href="{{ url_for('home.thermoforming') }}" class="btn btn-primary">Go Thermoforming</a>
+            </div>
+        </div>
+
+        <div class="card col " style="">
+            <img class="card-img-top" src="{{ url_for('static', filename='cnc.png')}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-white bg-dark">CNC</h5>
+                <p class="card-text">We, at DK Plastics, are able to create our own forming programs based on
+                    blueprints and various file types. This added step is taken to save the customer even more time and effort
+                    in their search for peace of mind through a reliable and efficient business transaction.
+                    From simple engraving to complex angular design, we will get the job done and done to match your expectations.</p>
+                <a href="{{ url_for('home.cnc') }}" class="btn btn-primary">Go CNC</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+<!--End of container-->
+<script>
+    function showDiv() {
+        let T = document.getElementById("TestsDiv"),
+            displayValue = "";
+        if (T.style.display == "") displayValue = "none";
+        T.style.display = displayValue;
+    }
+
+    function loading() {
+        $("#loading").show();
+        $("#content").hide();
+    }
+
+    $(document).ready(function () {
+        console.log("Im ready ");
+
+        showDiv();
+
+        setTimeout(function () {
+            $("#messageDiv").fadeOut("fast");
+        }, 5000);
+        $(window).load(function () {
+            $("#loading").hide();
+        });
+    });
+</script>
+
+{% endblock %}

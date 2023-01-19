@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div class="row mainContainer">
+        <div class="row">
+            <div class=" col-lg-6"><h4>CNC Capabilities</h4>
+                <p>At DK Plastics, we have the ability to rout the HDPE (High Density Polyethylene) sheets that we produce.</p>
+                <p>
+                    <strong>Specifications</strong>:
+                </p>
+                <ul class="roman">
+                    <li>2D and 3D molds compatible
+                        <ul class="square">
+                        <li>2D cutout from .06 inches to 1.5 inches thick</li>
+                        <li>3D cutout from .06 inches+</li>
+                    </ul>
+                    </li>
+
+                    <li>FLat Sheet</li>
+                    <li>Bed - 52 inches wide by 103 inches long</li>
+
+
+                </ul>
+                <p>Our vacuum forming and thermoforming equipment adapt quickly
+                    and easily
+                    to a variety of molds, sheet sizes and types of plastic.
+                    Once the
+                    prototype is right, our machine makes the transition to full
+                    production
+                    in a few simple steps.It forms all thermoplastics-- ABS
+                    Cycolac®, Acrylite®,
+                    UVEX®, polycarbonate, Lexan®, Tufftak®, polyethylene, HDPE
+                    --in thicknesses up
+                    to and .250". Set-up is fast, simple and inexpensive.</p>
+
+                <ul>
+                    <li>48" x 96" capability</li>
+                    <li>Up to 14" draw</li>
+                    <li>Single Platen Machine</li>
+                    <li>Polyethylene Prototyping</li>
+                    <li>99% of the products made by DK Plastics Thermoforming
+                        are made from formable HDPE
+                        sheet manufactured by DK Plastics Extrusion Facility.
+                    </li>
+
+
+                </ul>
+
+            </div>
+            <div class="row text-center col-lg-6">
+                <img class="img-fluid rounded mx-auto d-block"
+                     style="height: auto; max-width: 100%"
+                     src="{{ url_for('static', filename='cnc.png') }}"
+                     alt="">
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <p>
+                Our new extrusion line has increased our thickness and width
+                potentials. We can now offer sheets from 0.060" to 0.750" thick
+                and widths up to 70". We have also added a two sided SURF-Board
+                finish to use in such applications as cutting board and marine
+                board.
+
+                DK Plastics is dedicated to building business relationships
+                throughout the country. Call us when you need the best price,
+                fast delivery, special runs and a high standard of quality.
+            </p>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="banner_div col-lg-10 offset-lg-1">
+
+            <h3>Samples of CNC Products Created at DK Plastics</h3>
+            </div>
+
+
+        </div>
+        <div class="row">
+
+            <div class="text-center col-lg-4">
+                <img class="img-fluid rounded mx-auto d-block"
+                     style="height: auto; max-width: 100%"
+                     src="{{ url_for('static', filename='swimmingpoolcontrolboard.jpg') }}"
+                     alt="">
+                <p>Swimming Pool Control Board</p>
+
+            </div>
+
+            <div class="text-center col-lg-4">
+                <img class="img-fluid rounded mx-auto d-block"
+                     style="height: auto; max-width: 100%"
+                     src="{{ url_for('static', filename='cuttingboards.jpg') }}"
+                     alt="">
+                <p>Cutting Boards</p>
+
+            </div>
+            <div class="text-center col-lg-4">
+                <img class="img-fluid rounded mx-auto d-block"
+                     style="height: auto; max-width: 100%"
+                     src="{{ url_for('static', filename='theatrical.jpg') }}"
+                     alt="">
+                <p>Theatrical Applications (theatre prop)</p>
+
+            </div>
+
+        </div>
+    <div class=" d-flex flex-row-reverse ">
+        <div class="">
+            <a href="{{ url_for('home.gallery') }}"><u>View More...</u></a>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+<!--End of container-->
+<script>
+  function showDiv() {
+    let T = document.getElementById("TestsDiv"),
+      displayValue = "";
+    if (T.style.display == "") displayValue = "none";
+    T.style.display = displayValue;
+  }
+
+  function loading() {
+    $("#loading").show();
+    $("#content").hide();
+  }
+
+  $(document).ready(function () {
+    console.log("Im ready ");
+
+    showDiv();
+
+    setTimeout(function () {
+      $("#messageDiv").fadeOut("fast");
+    }, 5000);
+    $(window).load(function () {
+      $("#loading").hide();
+    });
+  });
+</script>
+
+{% endblock %}

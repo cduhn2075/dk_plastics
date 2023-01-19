@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="row mainContainer">
+        <div class="row">
+            <div class=" col-lg-6"><h4>Vaccum Thermoforming</h4>
+                <p>
+                    Vacuum forming and thermoforming equipment is
+                    used to manufacture hundreds of different
+                    products in a variety of industries, including:
+                </p>
+                <ul>
+                    <li>Agriculture</li>
+                    <li>Recycling</li>
+                    <li>Sanitation</li>
+                    <li>Signs</li>
+                    <li>Molds</li>
+                    <li>Lighting fixutures</li>
+                    <li>Marine recreational vehicle components</li>
+                    <li>and more ...</li>
+
+                </ul>
+                <p>Our vacuum forming and thermoforming equipment adapt quickly
+                    and easily
+                    to a variety of molds, sheet sizes and types of plastic.
+                    Once the
+                    prototype is right, our machine makes the transition to full
+                    production
+                    in a few simple steps.It forms all thermoplastics-- ABS
+                    Cycolac®, Acrylite®,
+                    UVEX®, polycarbonate, Lexan®, Tufftak®, polyethylene, HDPE
+                    --in thicknesses up
+                    to and .250". Set-up is fast, simple and inexpensive.</p>
+
+                <ul>
+                    <li>48" x 96" capability</li>
+                    <li>Up to 14" draw</li>
+                    <li>Single Platen Machine</li>
+                    <li>Polyethylene Prototyping</li>
+                    <li>99% of the products made by DK Plastics Thermoforming
+                        are made from formable HDPE
+                        sheet manufactured by DK Plastics Extrusion Facility.
+                    </li>
+
+
+                </ul>
+
+            </div>
+            <div class="row text-center col-lg-6">
+                <img class="img-fluid rounded mx-auto d-block"
+                     style="height: auto; max-width: 100%"
+                     src="{{ url_for('static', filename='thermoforming-1.jpg') }}"
+                     alt="">
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <p>
+                Our new extrusion line has increased our thickness and width
+                potentials. We can now offer sheets from 0.060" to 0.750" thick
+                and widths up to 70". We have also added a two sided SURF-Board
+                finish to use in such applications as cutting board and marine
+                board.
+
+                DK Plastics is dedicated to building business relationships
+                throughout the country. Call us when you need the best price,
+                fast delivery, special runs and a high standard of quality.
+            </p>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="banner_div col-lg-10 offset-lg-1">
+
+            <h3>Samples of Vacuum Thermoformed Products Created at DK Plastics</h3>
+            </div>
+
+
+        </div>
+        <div class="row">
+
+            <div class="text-center col-lg-4">
+                <img class="img-fluid rounded mx-auto d-block"
+                     style="height: auto; max-width: 100%"
+                     src="{{ url_for('static', filename='cylindercover.jpg') }}"
+                     alt="">
+                <p>Cylinder Cover</p>
+
+            </div>
+
+            <div class="text-center col-lg-4">
+                <img class="img-fluid rounded mx-auto d-block"
+                     style="height: auto; max-width: 100%"
+                     src="{{ url_for('static', filename='dumpster-lid.jpg') }}"
+                     alt="">
+                <p>Dumpster Lid</p>
+
+            </div>
+            <div class="text-center col-lg-4">
+                <img class="img-fluid rounded mx-auto d-block"
+                     style="height: auto; max-width: 100%"
+                     src="{{ url_for('static', filename='grainchute.jpg') }}"
+                     alt="">
+                <p>Grain Chute</p>
+
+            </div>
+
+        </div>
+    <div class=" d-flex flex-row-reverse ">
+        <div class="">
+            <a href="{{ url_for('home.gallery') }}"><u>View More...</u></a>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <!--End of container-->
+    <script>
+        function showDiv() {
+            let T = document.getElementById("TestsDiv"),
+                displayValue = "";
+            if (T.style.display == "") displayValue = "none";
+            T.style.display = displayValue;
+        }
+
+        function loading() {
+            $("#loading").show();
+            $("#content").hide();
+        }
+
+        $(document).ready(function () {
+            console.log("Im ready ");
+
+            showDiv();
+
+            setTimeout(function () {
+                $("#messageDiv").fadeOut("fast");
+            }, 5000);
+            $(window).load(function () {
+                $("#loading").hide();
+            });
+        });
+    </script>
+
+{% endblock %}

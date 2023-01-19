@@ -1,0 +1,199 @@
+body {
+  background-color: #000000;
+}
+
+.d-flex {
+    margin-bottom: 50px;
+}
+
+.htmx-settling img {
+  opacity: 0;
+}
+img {
+  transition: opacity 300ms ease-in;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+div#myDiv {
+  display: none;
+  text-align: center;
+}
+
+div#loading {
+  width: 50%;
+  height: 350px;
+  /*justify-content: center;*/
+  align-items: center;
+  background: url("../SVG-Loaders/svg-loaders/bars.svg") no-repeat;
+  cursor: wait;
+}
+
+.mainContainer {
+  background-color: white;
+    margin-bottom: 150px;
+
+}
+
+
+footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+
+}
+
+.footer {
+        background: #df9600;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 100px;
+        margin: auto;
+        width: 100%;
+        text-align:center;
+        padding: 30px;
+        color:#ffffff;
+    }
+
+.bg-primary {
+    background-color: #df9600 !important;
+
+}
+
+.btn-primary {
+    background-color: #df9600 ;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-color: #df9600;
+}
+
+.banner_div {
+    background: #df9600;
+    margin-bottom: 15px;
+}
+.img-wrap {
+    position: relative;
+}
+.img-wrap::before {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background-image: -moz-linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background-image: -ms-linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background-image: -o-linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background-image: -webkit-linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    content:"\00a0";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+.video-container {
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Just styling the content of the div, the *magic* in the previous rules */
+.video-container .caption {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  color: #dc0000;
+  padding: 10px;
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.centerUpload {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border: 3px solid white;
+}

@@ -1,0 +1,274 @@
+{% extends "base.html" %} {% block content %}
+
+    <div class=" row mainContainer">
+
+
+        <div class="card col-sm-10 offset-sm-1" id="content">
+            <div class="card-header text-white mb-3" style="background-color: #df9600">
+                Job Application
+            </div>
+            <div class="card-body">
+
+                <form method="post">
+
+                    <div class="form-group row">
+
+
+                        <h1>Personal Information</h1>
+                        {{ formJobapp.hidden_tag() }}
+                        <div class="col-sm-6">
+                            {{ formJobapp.fname.label(style='font-size: 24px') }}
+                            {{ formJobapp.fname(class='form-control') }}
+                            {{ formJobapp.lname.label(style='font-size: 24px') }}
+                            {{ formJobapp.lname(class='form-control') }}
+                            {{ formJobapp.mi.label(style='font-size: 24px') }}
+                            {{ formJobapp.mi(class='form-control') }}
+                            {{ formJobapp.entryDate.label(style='font-size: 24px') }}
+                            {{ formJobapp.entryDate(class='form-control') }}
+                            {{ formJobapp.streetAddress.label(style='font-size: 24px') }}
+                            {{ formJobapp.streetAddress(class='form-control') }}
+                            {{ formJobapp.city.label(style='font-size: 24px') }}
+                            {{ formJobapp.city(class='form-control') }}
+                            {{ formJobapp.state.label(style='font-size: 24px') }}
+                            {{ formJobapp.state(class='form-control') }}
+                            {{ formJobapp.zipcode.label(style='font-size: 24px') }}
+                            {{ formJobapp.zipcode(class='form-control') }}
+                            {{ formJobapp.phonenum.label(style='font-size: 24px') }}
+                            {{ formJobapp.phonenum(class='form-control') }}
+                            {{ formJobapp.email.label(style='font-size: 24px') }}
+                            {{ formJobapp.email(class='form-control') }}
+                            {{ formJobapp.avalible.label(style='font-size: 24px') }}
+                            {{ formJobapp.avalible(class='form-control') }}
+                            {{ formJobapp.ssn.label(style='font-size: 24px') }}
+                            {{ formJobapp.ssn(class='form-control') }}
+                            {{ formJobapp.salary.label(style='font-size: 24px') }}
+                            {{ formJobapp.salary(class='form-control') }}
+                            {{ formJobapp.position.label(style='font-size: 24px') }}
+                            {{ formJobapp.position(class='form-control') }}
+                            {{ formJobapp.usCitizen.label(style='font-size: 24px') }}
+                            {{ formJobapp.usCitizen(class='form-control') }}
+                            {{ formJobapp.usCitizenNoAuthorized.label(style='font-size: 24px') }}
+                            {{ formJobapp.usCitizenNoAuthorized(class='form-control') }}
+                            {{ formJobapp.previousWork.label(style='font-size: 24px') }}
+                            {{ formJobapp.previousWork(class='form-control') }}
+                            {{ formJobapp.previousWorkWhen.label(style='font-size: 24px') }}
+                            {{ formJobapp.previousWorkWhen(class='form-control') }}
+                            {{ formJobapp.felon.label(style='font-size: 24px') }}
+                            {{ formJobapp.felon(class='form-control') }}
+                            {{ formJobapp.explainFelon.label(style='font-size: 24px') }}
+                            {{ formJobapp.explainFelon(class='form-control') }}
+
+                            <h1>School Information</h1>
+                            {{ formJobapp.highschool.label(style='font-size: 24px') }}
+                            {{ formJobapp.highschool(class='form-control') }}
+                            {{ formJobapp.highschoolAddress.label(style='font-size: 24px') }}
+                            {{ formJobapp.highschoolAddress(class='form-control') }}
+                            {{ formJobapp.highschoolFrom.label(style='font-size: 24px') }}
+                            {{ formJobapp.highschoolFrom(class='form-control') }}
+                            {{ formJobapp.highschoolTo.label(style='font-size: 24px') }}
+                            {{ formJobapp.highschoolTo(class='form-control') }}
+                            {{ formJobapp.highschoolGraduate.label(style='font-size: 24px') }}
+                            {{ formJobapp.highschoolGraduate(class='form-control') }}
+                            {{ formJobapp.highschoolDegree.label(style='font-size: 24px') }}
+                            {{ formJobapp.highschoolDegree(class='form-control') }}
+
+                            {{ formJobapp.college.label(style='font-size: 24px') }}
+                            {{ formJobapp.college(class='form-control') }}
+                            {{ formJobapp.collegeAddress.label(style='font-size: 24px') }}
+                            {{ formJobapp.collegeAddress(class='form-control') }}
+                            {{ formJobapp.collegeFrom.label(style='font-size: 24px') }}
+                            {{ formJobapp.collegeFrom(class='form-control') }}
+                            {{ formJobapp.collegeTo.label(style='font-size: 24px') }}
+                            {{ formJobapp.collegeTo(class='form-control') }}
+                            {{ formJobapp.collegeGraduate.label(style='font-size: 24px') }}
+                            {{ formJobapp.collegeGraduate(class='form-control') }}
+                            {{ formJobapp.collegeDegree.label(style='font-size: 24px') }}
+                            {{ formJobapp.collegeDegree(class='form-control') }}
+
+                            {{ formJobapp.other.label(style='font-size: 24px') }}
+                            {{ formJobapp.other(class='form-control') }}
+                            {{ formJobapp.otherAddress.label(style='font-size: 24px') }}
+                            {{ formJobapp.otherAddress(class='form-control') }}
+                            {{ formJobapp.otherFrom.label(style='font-size: 24px') }}
+                            {{ formJobapp.otherFrom(class='form-control') }}
+                            {{ formJobapp.otherTo.label(style='font-size: 24px') }}
+                            {{ formJobapp.otherTo(class='form-control') }}
+                            {{ formJobapp.otherGraduate.label(style='font-size: 24px') }}
+                            {{ formJobapp.otherGraduate(class='form-control') }}
+                            {{ formJobapp.otherDegree.label(style='font-size: 24px') }}
+                            {{ formJobapp.otherDegree(class='form-control') }}
+                            <h1>First Personal Reference</h1>
+                            {{ formJobapp.firstRefName.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstRefName(class='form-control') }}
+                            {{ formJobapp.firstRefRelationship.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstRefRelationship(class='form-control') }}
+                            {{ formJobapp.firstRefPhone.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstRefPhone(class='form-control') }}
+                            {{ formJobapp.firstRefAddress.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstRefAddress(class='form-control') }}
+                            {{ formJobapp.firstRefCompany.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstRefCompany(class='form-control') }}
+                            <h1>Second Personal Reference</h1>
+                            {{ formJobapp.secondRefName.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondRefName(class='form-control') }}
+                            {{ formJobapp.secondRefRelationship.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondRefRelationship(class='form-control') }}
+                            {{ formJobapp.secondRefPhone.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondRefPhone(class='form-control') }}
+                            {{ formJobapp.secondRefAddress.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondRefAddress(class='form-control') }}
+                            {{ formJobapp.secondRefCompany.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondRefCompany(class='form-control') }}
+                            <h1>Third Personal Reference</h1>
+                            {{ formJobapp.thirdRefName.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdRefName(class='form-control') }}
+                            {{ formJobapp.thirdRefRelationship.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdRefRelationship(class='form-control') }}
+                            {{ formJobapp.thirdRefPhone.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdRefPhone(class='form-control') }}
+                            {{ formJobapp.thirdRefAddress.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdRefAddress(class='form-control') }}
+                            {{ formJobapp.thirdRefCompany.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdRefCompany(class='form-control') }}
+                        </div>
+                        <div class="col-sm-6">
+                            <h1>Work History</h1>
+                            <h1>Job 1</h1>
+                            {{ formJobapp.firstJobName.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobName(class='form-control') }}
+                            {{ formJobapp.firstJobPhone.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobPhone(class='form-control') }}
+                            {{ formJobapp.firstJobAddress.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobAddress(class='form-control') }}
+                            {{ formJobapp.firstJobSupervisor.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobSupervisor(class='form-control') }}
+                            {{ formJobapp.firstJobTitle.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobTitle(class='form-control') }}
+                            {{ formJobapp.firstJobSSalary.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobSSalary(class='form-control') }}
+                            {{ formJobapp.firstJobESalary.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobESalary(class='form-control') }}
+                            {{ formJobapp.firstJobResponsibilities.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobResponsibilities(class='form-control') }}
+                            {{ formJobapp.firstJobFrom.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobFrom(class='form-control') }}
+                            {{ formJobapp.firstJobTo.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobTo(class='form-control') }}
+                            {{ formJobapp.firstJobLeave.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobLeave(class='form-control') }}
+                            {{ formJobapp.firstJobpreviousWork.label(style='font-size: 24px') }}
+                            {{ formJobapp.firstJobpreviousWork(class='form-control') }}
+
+                            <h1>Job 2</h1>
+                            {{ formJobapp.secondJobName.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobName(class='form-control') }}
+                            {{ formJobapp.secondJobPhone.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobPhone(class='form-control') }}
+                            {{ formJobapp.secondJobAddress.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobAddress(class='form-control') }}
+                            {{ formJobapp.secondJobSupervisor.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobSupervisor(class='form-control') }}
+                            {{ formJobapp.secondJobTitle.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobTitle(class='form-control') }}
+                            {{ formJobapp.secondJobSSalary.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobSSalary(class='form-control') }}
+                            {{ formJobapp.secondJobESalary.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobESalary(class='form-control') }}
+                            {{ formJobapp.secondJobResponsibilities.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobResponsibilities(class='form-control') }}
+                            {{ formJobapp.secondJobFrom.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobFrom(class='form-control') }}
+                            {{ formJobapp.secondJobTo.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobTo(class='form-control') }}
+                            {{ formJobapp.secondJobLeave.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobLeave(class='form-control') }}
+                            {{ formJobapp.secondJobpreviousWork.label(style='font-size: 24px') }}
+                            {{ formJobapp.secondJobpreviousWork(class='form-control') }}
+                            <h1>Job 3</h1>
+                            {{ formJobapp.thirdJobName.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobName(class='form-control') }}
+                            {{ formJobapp.thirdJobPhone.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobPhone(class='form-control') }}
+                            {{ formJobapp.thirdJobAddress.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobAddress(class='form-control') }}
+                            {{ formJobapp.thirdJobSupervisor.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobSupervisor(class='form-control') }}
+                            {{ formJobapp.thirdJobTitle.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobTitle(class='form-control') }}
+                            {{ formJobapp.thirdJobSSalary.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobSSalary(class='form-control') }}
+                            {{ formJobapp.thirdJobESalary.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobESalary(class='form-control') }}
+                            {{ formJobapp.thirdJobResponsibilities.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobResponsibilities(class='form-control') }}
+                            {{ formJobapp.thirdJobFrom.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobFrom(class='form-control') }}
+                            {{ formJobapp.thirdJobTo.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobTo(class='form-control') }}
+                            {{ formJobapp.thirdJobLeave.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobLeave(class='form-control') }}
+                            {{ formJobapp.thirdJobpreviousWork.label(style='font-size: 24px') }}
+                            {{ formJobapp.thirdJobpreviousWork(class='form-control') }}
+                            <h1>Branch of Service</h1>
+                            {{ formJobapp.branchService.label(style='font-size: 24px') }}
+                            {{ formJobapp.branchService(class='form-control') }}
+                            {{ formJobapp.branchFrom.label(style='font-size: 24px') }}
+                            {{ formJobapp.branchFrom(class='form-control') }}
+                            {{ formJobapp.branchTo.label(style='font-size: 24px') }}
+                            {{ formJobapp.branchTo(class='form-control') }}
+                            {{ formJobapp.branchRankDischarge.label(style='font-size: 24px') }}
+                            {{ formJobapp.branchRankDischarge(class='form-control') }}
+                            {{ formJobapp.branchtypeDischarge.label(style='font-size: 24px') }}
+                            {{ formJobapp.branchtypeDischarge(class='form-control') }}
+                            {{ formJobapp.branchwasHonerable.label(style='font-size: 24px') }}
+                            {{ formJobapp.branchwasHonerable(class='form-control') }}
+                            {{ formJobapp.branchexplainHonerable.label(style='font-size: 24px') }}
+                            {{ formJobapp.branchexplainHonerable(class='form-control') }}
+                            <h1>Employee Signiture</h1>
+                            {{ formJobapp.signiture.label(style='font-size: 24px') }}
+                            {{ formJobapp.signiture(class='form-control') }}
+                            {{ formJobapp.signitureDate.label(style='font-size: 24px') }}
+                            {{ formJobapp.signitureDate(class='form-control') }}
+                            <br>
+                            {{ recaptcha }}
+                            {{ formJobapp.submit(class='btn btn-primary') }}
+                            </div>
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div><!--The end of the card-->
+
+    </div>
+    <br>
+    <!--End of container-->
+    <script>
+        function showDiv() {
+            let T = document.getElementById("TestsDiv"),
+                displayValue = "";
+            if (T.style.display == "") displayValue = "none";
+            T.style.display = displayValue;
+        }
+
+        function loading() {
+            $("#loading").show();
+            $("#content").hide();
+        }
+
+        $(document).ready(function () {
+            console.log("Im ready ");
+
+            {#showDiv();#}
+
+            setTimeout(function () {
+                $("#messageDiv").fadeOut("fast");
+            }, 5000);
+            $(window).load(function () {
+                $("#loading").hide();
+            });
+        });
+    </script>
+
+{% endblock %}

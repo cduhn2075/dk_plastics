@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div class="row mainContainer">
+    <div class="row">
+        <div class="col-lg-6">
+            <h4>Representatives</h4>
+            <h6>Indiana Area</h6>
+            <h2>Plastics Dynamics</h2>
+            <address>
+                50671 Tarrington Way<br>
+                Granger, IN 46530<br>
+                Phone <a href="tel:8882589228"> 888-258-9228</a> or <a href="tel:2192724576">219-272-4576</a><br>
+                Fax 219-272-5004
+            </address>
+            <br>
+            <h6>Other Areas</h6>
+            <p>Please contact us directly.</p>
+
+            <h2>DK Plastics</h2>
+            <h6>Main Office and Sales</h6>
+            <address>
+                5238 370th Street<br>
+                Archer, IA 51231<br>
+                Phone <a href="tel:8007280110"> 800-728-0110</a><br>
+                Fax (712) 723-5374
+            </address>
+
+
+        </div>
+        <div class="row text-center col-lg-6">
+                <img class="img-fluid rounded mx-auto d-block" style="height: auto; max-width: 100%" src="{{ url_for('static', filename='plasticsheet.jpg')}}" alt="">
+
+            </div>
+    </div>
+
+
+
+
+  </div>
+
+<!--End of container-->
+<script>
+  function showDiv() {
+    let T = document.getElementById("TestsDiv"),
+      displayValue = "";
+    if (T.style.display == "") displayValue = "none";
+    T.style.display = displayValue;
+  }
+
+  function loading() {
+    $("#loading").show();
+    $("#content").hide();
+  }
+
+  $(document).ready(function () {
+    console.log("Im ready ");
+
+    showDiv();
+
+    setTimeout(function () {
+      $("#messageDiv").fadeOut("fast");
+    }, 5000);
+    $(window).load(function () {
+      $("#loading").hide();
+    });
+  });
+</script>
+
+{% endblock %}

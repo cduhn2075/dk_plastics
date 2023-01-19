@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row mainContainer">
+        <div class="row">
+        <div class=" col-lg-4"><h4>DK Plastics</h4>
+            <p>DK Plastics was established in 1995 to help meet the growing needs for heavy gauge sheet plastic. We are a successful,
+                family-owned corporation, with our manufacturing facilities headquartered in Archer, Iowa.
+                Our Parent company, Dave De Kok, Inc. was established in 1963. In 1998, we extruded our first HDPE sheets in a new 6000 square foot building.
+                Our business has grown steadily, and in 2007 we added a third extruder, requiring a new building.
+                We began extruding in our new 40,000 square foot building in September of 2007. Our original building houses our thermoforming equipment.
+                <a href="{{ url_for('home.representatives') }}">More...</a></p>
+
+        </div>
+            <div class="row text-center col-lg-8">
+                <img class="img-fluid rounded mx-auto d-block" style="height: auto; max-width: 100%" src="{{ url_for('static', filename='DKWestBuilding2.png')}}" alt="">
+
+            </div>
+        </div>
+    <div class="row">
+        <p>
+            Our new extrusion line has increased our thickness and width potentials. We can now offer sheets from 0.060" to 0.750" thick and widths up to 70".
+            We have also added a two sided SURF-Board finish to use in such applications as cutting board and marine board.
+            DK Plastics is dedicated to building business relationships throughout the country.
+            Call us when you need the best price, fast delivery, special runs and a high standard of quality.
+        </p>
+    </div>
+        <hr>
+        <div class="row">
+
+            <div class="text-center col-lg-3">
+                <img class="img-fluid rounded mx-auto d-block" style="height: auto; max-width: 100%" src="{{ url_for('static', filename='blackfinish3_2.png')}}" alt="">
+                <p>Black Finished Sheet</p>
+
+            </div>
+
+            <div class="text-center col-lg-3">
+                <img class="img-fluid rounded mx-auto d-block" style="height: auto; max-width: 100%" src="{{ url_for('static', filename='inventory2.png')}}" alt="">
+                <p>Sample inventory</p>
+
+            </div>
+            <div class="text-center col-lg-3">
+                <img class="img-fluid rounded mx-auto d-block" style="height: auto; max-width: 100%" src="{{ url_for('static', filename='scott.jpg')}}" alt="">
+                <p>Scott - Plastic Sheet</p>
+
+            </div>
+            <div class="text-center col-lg-3">
+                <img class="img-fluid rounded mx-auto d-block" style="height: auto; max-width: 100%" src="{{ url_for('static', filename='jeff.jpg')}}" alt="">
+                <p>Jeff</p>
+
+            </div>
+            <div class="row">
+
+            <div class="text-center col-lg-4 offset-lg-4">
+                <img class="img-fluid rounded mx-auto d-block" style="height: auto; max-width: 100%" src="{{ url_for('static', filename='diana2.jpg')}}" alt="">
+                <p>Diana - Secretary</p>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+<!--End of container-->
+<script>
+  function showDiv() {
+    let T = document.getElementById("TestsDiv"),
+      displayValue = "";
+    if (T.style.display == "") displayValue = "none";
+    T.style.display = displayValue;
+  }
+
+  function loading() {
+    $("#loading").show();
+    $("#content").hide();
+  }
+
+  $(document).ready(function () {
+    console.log("Im ready ");
+
+    showDiv();
+
+    setTimeout(function () {
+      $("#messageDiv").fadeOut("fast");
+    }, 5000);
+    $(window).load(function () {
+      $("#loading").hide();
+    });
+  });
+</script>
+
+{% endblock %}

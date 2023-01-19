@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div class=" row mainContainer">
+
+
+        <div class="card col-sm-10 offset-sm-1" id="content">
+            <div class="card-header text-white mb-3" style="background-color: #df9600">
+                Contact Us
+            </div>
+            <div class="card-body">
+    <form method="post">
+        {{ formContact.hidden_tag() }}
+        <div>
+            <!-- name forms -->
+            <p>
+                {{ formContact.name.label(style='font-size: 24px') }} <br>
+                {{ formContact.name(class='form-control',placeholder='Your name') }}
+            </p>
+            <!-- email forms -->
+            <p>
+                {{ formContact.email.label(style='font-size: 24px') }} <br>
+                {{ formContact.email(class='form-control',placeholder='Your e-mail ...') }}
+            </p>
+            <!-- Subject of your request -->
+            <p>
+                {{ formContact.subject.label(style='font-size: 24px') }}<br>
+                {{formContact.subject(class='form-control',placeholder='Your subject ...')}}
+            </p>
+            <!-- Content of your request -->
+            <p>
+                {{ formContact.message.label(style='font-size: 24px') }}<br>
+                {{ formContact.message(class='form-control',placeholder='write your request ...') }}
+            </p>
+            <!--The recaptcha-->
+            {{ recaptcha }}
+            <!-- Submit button -->
+            <p>
+                {{ formContact.submit(class='btn btn-primary') }}
+            </p>
+        </div>
+    </form>
+            </div>
+</div>
+  </div>
+
+<!--End of container-->
+<script>
+        function showDiv() {
+            let T = document.getElementById("TestsDiv"),
+                displayValue = "";
+            if (T.style.display == "") displayValue = "none";
+            T.style.display = displayValue;
+        }
+
+        function loading() {
+            $("#loading").show();
+            $("#content").hide();
+        }
+
+        $(document).ready(function () {
+            console.log("Im ready ");
+
+            {#showDiv();#}
+
+            setTimeout(function () {
+                $("#messageDiv").fadeOut("fast");
+            }, 5000);
+            $(window).load(function () {
+                $("#loading").hide();
+            });
+        });
+    </script>
+
+{% endblock %}
